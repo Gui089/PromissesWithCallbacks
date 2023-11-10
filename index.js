@@ -18,7 +18,7 @@ function getPhoneNumber(idUser) {
                 phone: '124124',
                 ddd: 11
             })
-        },1000);
+        },2000);
     })
 }
 
@@ -36,7 +36,7 @@ const userPromisse = getUser();
 userPromisse
     .then(function (user) {
         return getPhoneNumber(user.id)
-        .the(function resolverPhone(result) {
+            .the(function resolverPhone(result) {
             return {
                 user: {
                     name: user.name,
